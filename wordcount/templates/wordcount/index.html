@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'wordcount/style.css' %}">
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <section class="container">
+            <h1>Type the text on the box bellow:</h1>
+            <form method="post" action="{% url 'wordcount:result' %}">
+                {% csrf_token %}
+                <textarea name="text" rows="25" cols="80"></textarea>
+                <input class="submit" type="submit" value="Submit"/>
+            </form>
+        </section>
+    </body>
+</html>

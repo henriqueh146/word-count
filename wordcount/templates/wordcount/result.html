@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'wordcount/style.css' %}">
+<html>
+    <head>
+
+    </head>
+    <body>
+        <section class="container">
+            <h1>Result: {{ word_amount }}</h1>
+            <button class="submit" type="button" onclick="history.go(-1)">Back to the form</button>
+        </section>
+    </body>
+</html>
